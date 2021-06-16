@@ -14,7 +14,7 @@ df_new = df.loc[(df['Type 1']== 'Grass') & (df['Speed']== 80) & (df['HP'] >70)].
 print(df_new)
        
 
-
+#filtering data based on textual pattern(regex filtering)
 
 
 
