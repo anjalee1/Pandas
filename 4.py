@@ -51,6 +51,25 @@ print(ser1.add(ser2).head(5))
 print(ser1.sub(ser2).head(5))
 
 #conversion operation on series
+#conversion of type
+before = df.dtypes
+print(before)
+
+df['Defense'] =df['Defense'].astype(str)
+df['Sp. Def'] =df['Sp. Def'].astype(str)
+
+after = df.dtypes
+print(after)
+
+  #conversion to list
+
+dtype_before = type(df['HP'])
+print(dtype_before)
+
+hp_list= df['HP'].tolist()
+dtype_after = type(hp_list)
+print(dtype_after)
+
 
 
 
