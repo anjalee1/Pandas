@@ -35,4 +35,22 @@ dct ={'Name':['Tom', 'nick', 'krish', 'jack'], 'Age':[20, 21, 19, 18]}
 df2 = pd.DataFrame(dct)#Creating dataframe using dictionary
 print(df2)
 
+#pandas series
+
+df = pd.read_csv('pokemon_data.csv')
+
+ser= pd.Series(df['Name']) #creating a series
+# print(ser)
+
+#binary operation on series
+
+ser1 =pd.Series(df['Attack'])
+ser2 =pd.Series(df['Sp. Atk'])
+
+print(ser1.add(ser2).head(5))
+print(ser1.sub(ser2).head(5))
+
+#conversion operation on series
+
+
 
