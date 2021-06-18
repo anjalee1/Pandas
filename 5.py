@@ -37,11 +37,30 @@ df=pd.read_csv("pokemon_data.csv", usecols=["Type 1",'Type 2'],squeeze=True)
 # skips the passed rows in new series
 df =pd.read_csv("pokemon_data.csv",skiprows=[1, 2, 3, 4])
 
-
-#writing Excel files using the XlsxWriter modules.
+#writing Excel files using the XlsxWriter modules
 
 df = pd.DataFrame({'Data': ['nikola', 'einstein', 'carl', 'marie',
                             'neil', 'hawking', 'michio']})
-writer = pd.ExcelWriter('sci1.xlsx',engine='xlsxwriter')# Create a Pandas Excel writer object using XlsxWriter as the engine.
+df1 = pd.DataFrame({'Data': ['data1', 'data2', 'data3', 'data4',
+                            'data5', 'data6', 'data7']})
+
+df2=pd.DataFrame({'Data': ['data8', 'data9', 'data10', 'data11',
+                            'data12', 'data13', 'data14']})
+df3=pd.DataFrame({'Data': ['data15', 'data16', 'data17', 'data18',
+                            'data19', 'data20', 'data21']})
+
+ #Writing multiple dataframes to worksheets using Pandas and XlsxWriter.
+writer = pd.ExcelWriter('sci1.xlsx',engine='xlsxwriter')
 df.to_excel(writer, sheet_name ='Sheet1')
+df1.to_excel(writer, sheet_name ='Sheet2')
+df2.to_excel(writer, sheet_name ='Sheet3')
+df3.to_excel(writer, sheet_name ='Sheet4')
+
+ # writing and Positioning the dataframes in the worksheet.
+df.to_excel(writer, sheet_name='Sheet5')
+df1.to_excel(writer, sheet_name='Sheet5', startcol=3)
+df2.to_excel(writer, sheet_name='Sheet5', startrow=9)
+df3.to_excel(writer, sheet_name ='Sheet5',startcol=3,startrow=9)
+writer.save()
+
 
