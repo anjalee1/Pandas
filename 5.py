@@ -36,3 +36,12 @@ df=pd.read_csv("pokemon_data.csv", usecols=["Type 1",'Type 2'],squeeze=True)
 
 # skips the passed rows in new series
 df =pd.read_csv("pokemon_data.csv",skiprows=[1, 2, 3, 4])
+
+
+#writing Excel files using the XlsxWriter modules.
+
+df = pd.DataFrame({'Data': ['nikola', 'einstein', 'carl', 'marie',
+                            'neil', 'hawking', 'michio']})
+writer = pd.ExcelWriter('sci1.xlsx',engine='xlsxwriter')
+df.to_excel(writer, sheet_name ='Sheet1')
+
