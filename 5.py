@@ -20,3 +20,19 @@ data = df.head(5)
 data = data.drop(columns=['#'])
 print(data[[True, False, True, False,True]])# When we apply a boolean mask it will
                                             #print only that dataframe in which we pass a boolean value True.
+#some of the important parameters used with read_csv
+
+# makes the passed rows header
+df =pd.read_csv("pokemon_data.csv", header=[1, 2])
+
+# make the passed column as index instead of 0, 1, 2, 3....
+ df =pd.read_csv("pokemon_data.csv", index_col='Type 1')
+
+# uses passed cols only for data frame
+df= pd.read_csv("pokemon_data.csv", usecols=["Type 1",'Type 2'])
+
+# returuns pandas series if there is only one colunmn
+df=pd.read_csv("pokemon_data.csv", usecols=["Type 1",'Type 2'],squeeze=True)
+
+# skips the passed rows in new series
+df =pd.read_csv("pokemon_data.csv",skiprows=[1, 2, 3, 4])
