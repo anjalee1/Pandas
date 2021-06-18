@@ -14,3 +14,9 @@ print(data.loc[True])
 # value (True or False)  but iloc[] function accept only integer as argument so
 # it will throw an error if we pass  boolean  value (True or False) ]
 print(data.iloc[0:5])
+
+#Applying a boolean mask to a dataframe
+data = df.head(5)
+data = data.drop(columns=['#'])
+print(data[[True, False, True, False,True]])# When we apply a boolean mask it will
+                                            #print only that dataframe in which we pass a boolean value True.
