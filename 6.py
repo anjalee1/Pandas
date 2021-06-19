@@ -9,3 +9,8 @@ df['AU-col'] = new_col #method1
 df.insert(2, "Anjali", [1, 2, 3, 4,5,6], True) #method2- using insert()
 df=df.assign(Nickname = ['Bul', 'Ivy', 'Ven', 'venus','charm','charl'])#method3- using assign()
 print(df)
+
+#truncate dataframe
+
+result = df.truncate(before=2, after=4)
+print(result)
