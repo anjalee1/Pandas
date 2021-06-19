@@ -14,3 +14,16 @@ print(df)
 
 result = df.truncate(before=2, after=4)
 print(result)
+
+#Iterating over rows
+
+for i, j in df.iterrows(): #method1- using iterrows()
+    print(i, j)
+    print()
+
+for key, value in df.iteritems(): #method2- using iteritems()
+    print(key, value)
+    print()
+
+for i in df.itertuples():#method3- using itertuples()
+    print(i)
