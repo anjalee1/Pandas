@@ -43,3 +43,11 @@ for i in columns:
 df= pd.read_csv("pokemon_data.csv", usecols=['Name','Type 1','Type 2'],nrows=6)
 print(df.isnull())#return dataframe of Boolean values which are True for NaN values.
 print(df.notnull())#return dataframe of Boolean values which are False for NaN values.
+
+print(df.replace(to_replace =np.NaN, value = "Anj-typ"))
+
+df1= pd.DataFrame({"A":[12, 4, 5, None, 1],
+                   "B":[None, 2, 54, 3, None],
+                   "C":[20, 16, None, 3, 8],
+                   "D":[14, 3, None, None, 6]})
+print(df1.interpolate(method ='linear', limit_direction ='forward'))# interpolate works with numeric type only
