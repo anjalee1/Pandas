@@ -18,7 +18,10 @@ worksheet_object = writer_object.sheets['Poke']
 worksheet_object.set_column('C:D', 20)
 
 #create a column chart object that can be added to a worksheet using add_chart() method.
-chart_object = workbook_object.add_chart({'type': 'column'})
+chart_object = workbook_object.add_chart({'type': 'column'})#to create column chart
+# chart_object = workbook_object.add_chart({'type': 'line'}) #to create line chart
+# chart_object = workbook_object.add_chart({'type': 'scatter'})#to create scatter chart
+
 
 # Add a data series to a chart
 # using add_series method.
