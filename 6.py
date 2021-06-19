@@ -36,3 +36,10 @@ columns = list(df)
 for i in columns:
     # printing the third element of the column
     print(df[i][2])
+
+#Working with Missing Data
+#Checking for missing values using isnull() and notnull()
+
+df= pd.read_csv("pokemon_data.csv", usecols=['Name','Type 1','Type 2'],nrows=6)
+print(df.isnull())#return dataframe of Boolean values which are True for NaN values.
+print(df.notnull())#return dataframe of Boolean values which are False for NaN values.
