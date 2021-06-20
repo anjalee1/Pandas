@@ -62,5 +62,3 @@ df1.to_excel(writer, sheet_name='Sheet5', startcol=3)
 df2.to_excel(writer, sheet_name='Sheet5', startrow=9)
 df3.to_excel(writer, sheet_name ='Sheet5',startcol=3,startrow=9)
 writer.save()
-
-
