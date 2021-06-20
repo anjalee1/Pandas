@@ -29,10 +29,4 @@ df.loc[df['Name'].str.contains('^pi[a-z]*', flags=re.I, regex=True)]
 df.loc[df['Type 1']== 'Fire','Type 1'] = 'Flamer'
 df.loc[df['Type 1']== 'Fire','Legendary'] = True #parameter does not to be the same column
 df.loc[df['HP']<50,['Generation','Legendary']]= 'same value' #changing two columns at the same time with same value 
-df.loc[df['HP']<50,['Generation','Legendary']]= ['diff1','diff2] #changing two columns at the same time with different value 
- 
- 
-
-
-
-
+df.loc[df['HP']<50,['Generation','Legendary']]= ['diff1','diff2] #changing two columns at the same time with different value
