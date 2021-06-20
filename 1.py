@@ -48,5 +48,3 @@ print(df.iloc[2,1])
 #getting rows based on specific condition
 
 print(df.loc[df['Type 1'] == "Fire"])
-
-
