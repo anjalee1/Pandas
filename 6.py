@@ -29,10 +29,8 @@ for i in df.itertuples():#method3- using itertuples()
     print(i)
 
 #Iterating over Columns
-
 # creating a list of dataframe columns
 columns = list(df)
-
 for i in columns:
     # printing the third element of the column
     print(df[i][2])
