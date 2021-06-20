@@ -69,7 +69,3 @@ print(dtype_before)
 hp_list= df['HP'].tolist()
 dtype_after = type(hp_list)
 print(dtype_after)
-
-
-
-
