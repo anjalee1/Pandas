@@ -21,9 +21,5 @@ df = df[cols[0:4] + [cols[-1]]+cols[4:12]]
 
 #exporting the data to desired format
 df.to_csv('modified.csv', index=False)
-
 df.to_excel('modified.xlsx', index=False)
-
 df.to_csv('modified.txt', index=False, sep='\t')
-
-
